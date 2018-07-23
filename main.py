@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def main():
     resp_data = {}
-    resp_data['text'] = "<https://youtu.be/xGKowUNYrKA>"
+    resp_data['text'] = "<https://media.giphy.com/media/XwYRccbV0jWkU/giphy.gif>"
     resp_data['token']= "5pwjbt39zj8i5dtux7jkaci4wc"
     
     resp = Response(content_type='application/json')
