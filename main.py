@@ -5,16 +5,12 @@ import json
 
 app = Flask(__name__)
 
-
 @app.route('/', methods=['GET', 'POST'])
 def main():
     resp_data = {}
-    resp_data['text'] = "OSS 117, pour vous servir"
-    resp_data['token'] = "5pwjbt39zj8i5dtux7jkaci4wc"
-    attachment = []
-    attachment.append({'image_url': 'https://media.giphy.com/media/XwYRccbV0jWkU/giphy.gif'}) # NOQA
+    resp_data['text'] = "https://www.youtube.com/watch?v=2h-pv7LEx8U"
+    resp_data['token']= "5pwjbt39zj8i5dtux7jkaci4wc"
     
-    resp_data['attachments'] = attachment
     resp = Response(content_type='application/json')
     resp.set_data(json.dumps(resp_data))
 
