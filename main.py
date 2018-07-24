@@ -42,7 +42,8 @@ app = Flask(__name__)
 def main():
 
 	resp_data = {}
-	resp_data['text'] = random.choice(VIDEO_LINKS)
+	resp_data['text'] = '''OSS 117, pour vous servir
+	{}'''.format(random.choice(VIDEO_LINKS))
 	resp_data['icon_url'] = ICON_URL
 	resp_data['response_type'] = 'in_channel'
 	resp_data['token'] = TOKEN
