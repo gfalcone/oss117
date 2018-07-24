@@ -36,9 +36,11 @@ def main():
 		'https://www.youtube.com/watch?v=TgJM5Lnkgh8'
 	]
 	resp_data = {}
-	resp_data['text'] = random.choice(links) 
-	resp_data['token']= "5pwjbt39zj8i5dtux7jkaci4wc"
-    
+	resp_data['text'] = random.choice(links)
+	resp_data['icon_url'] = 'https://static-s.aa-cdn.net/img/gp/20600007231143/U6Pbz5rbmBOvy5nIWsjLAnQal_lGXJ0uzbpN1Ta9Rgd4DKequUFBDC-yNyAVgYUijbHq=w300?v=1' # NOQA
+	resp_data['response_type'] = 'in_channel'
+	resp_data['token'] = "5pwjbt39zj8i5dtux7jkaci4wc"
+
 	resp = Response(content_type='application/json')
 	resp.set_data(json.dumps(resp_data))
 	return resp
