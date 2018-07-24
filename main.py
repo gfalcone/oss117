@@ -8,6 +8,7 @@ import json
 
 app = Flask(__name__)
 
+
 @app.route('/', methods=['GET', 'POST'])
 def main():
 	links = [
@@ -32,14 +33,12 @@ def main():
 		'https://www.youtube.com/watch?v=mBB4JBRjYVU',
 		'https://www.youtube.com/watch?v=64QjwYDaSEw',
 		'https://www.youtube.com/watch?v=S2qLOg-de0o',
-		'https://www.youtube.com/watch?v=TgJM5Lnkgh8',
+		'https://www.youtube.com/watch?v=TgJM5Lnkgh8'
 	]
-	
-    resp_data = {}
-    resp_data['text'] = random.choice(links) 
-    resp_data['token']= "5pwjbt39zj8i5dtux7jkaci4wc"
+	resp_data = {}
+	resp_data['text'] = random.choice(links) 
+	resp_data['token']= "5pwjbt39zj8i5dtux7jkaci4wc"
     
-    resp = Response(content_type='application/json')
-    resp.set_data(json.dumps(resp_data))
-
-    return resp
+	resp = Response(content_type='application/json')
+	resp.set_data(json.dumps(resp_data))
+	return resp
